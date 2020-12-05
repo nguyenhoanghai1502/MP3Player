@@ -5,7 +5,7 @@ public class ChuyenDoiTime {
         String finalTimerString = "";
         String secondString= "";
 
-        //chuyen doi
+        //chuyen doi thoi gian ve dang seconds
         int hours=(int) (miliseconds/(1000*60*60));
         int minutes=(int) (miliseconds%(1000*60*60))/(1000*60);
         int seconds=(int) ((miliseconds%(1000*60*60))%(1000*60)/1000);
@@ -22,7 +22,6 @@ public class ChuyenDoiTime {
     }
 
     //chuyen doi phan thoi gian ve dang phan tram
-
     public static int getProgressPercentage(long currentDuration, long totalDuration){
         Double percentage=(double) 0;
         long currentSeconds=(int) (currentDuration/1000);
@@ -35,7 +34,6 @@ public class ChuyenDoiTime {
     }
 
     //Chuyen doi tu progress ve hien thi thoi gian
-
     public static int ProgressToTimer(int progress, int totalDuration){
         int currentDuration=0;
         totalDuration=(int) (totalDuration/1000);

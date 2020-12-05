@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1D1D">
+
+    <Toolbar
+        android:id="@+id/menusong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000" />
+
+    <RelativeLayout
+        android:id="@+id/khungplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#000000">
+
+        <ImageView
+            android:id="@+id/btnplay"
+            android:layout_width="58dp"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/btnplay" />
+
+        <ImageView
+            android:id="@+id/btnbackward"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@+id/btnplay"
+            android:padding="10dp"
+            android:src="@drawable/btnbackward" />
+
+        <ImageView
+            android:id="@+id/btnfoward"
+            android:layout_centerVertical="true"
+            android:layout_height="64dp"
+            android:layout_width="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/btnplay"
+            android:padding="10dp"
+            android:src="@drawable/btnfoward"/>
+
+        <ImageView
+            android:id="@+id/btnbacksong"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@+id/btnbackward"
+            android:padding="10dp"
+            android:src="@drawable/btnbacksong" />
+
+        <ImageView
+            android:id="@+id/btnnextsong"
+            android:layout_width="50dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/btnfoward"
+            android:padding="10dp"
+            android:src="@drawable/btnnext" />
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/btnnextsong"
+            android:padding="10dp"
+            android:src="@drawable/btnloop" />
+    </RelativeLayout>
+    <SeekBar
+        android:id="@+id/seekbartime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/khungplay"
+        android:outlineAmbientShadowColor="@color/black"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:id="@+id/lbl_currentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seekbartime"
+        android:text="00:00"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/lbl_totalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seekbartime"
+        android:layout_alignParentRight="true"
+        android:text="00:00"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seekbartime"
+        android:layout_below="@id/menusong"
+        android:src="@drawable/tpameofficial"
+        android:layout_centerVertical="true" />
+</RelativeLayout>
