@@ -7,8 +7,8 @@ import java.io.FilenameFilter;
 import java.util.ArrayList;
 
 public class SongManager {
-    final String MEDIA_PATH=new String("/sdcard/Download/");
-    private ArrayList<SongModel> songlist=new ArrayList<SongModel>();
+    final String MEDIA_PATH= "/sdcard/Download/";
+    private final ArrayList<SongModel> songlist=new ArrayList<SongModel>();
 
     public ArrayList<SongModel> getSonglist(){
         File home=new File(MEDIA_PATH);
@@ -27,7 +27,7 @@ public class SongManager {
     }
     class FileExtensionFilter implements FilenameFilter{
         public boolean accept(File dir, String name){
-            return (name.endsWith(".mp3")||name.endsWith(".MP3"));
+            return (name.endsWith(".m4a")||name.endsWith(".M4A"));
         }
     }
 }

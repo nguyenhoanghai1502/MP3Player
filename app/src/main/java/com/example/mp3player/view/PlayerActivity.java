@@ -1,5 +1,6 @@
 package com.example.mp3player.view;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Notification;
@@ -12,6 +13,9 @@ import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -150,13 +154,105 @@ public class PlayerActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onCompletion(MediaPlayer mediaPlayer) {
-
+        if(currentsongindex<(arrSongs.size()-1)){
+            playSong(currentsongindex+1);
+            currentsongindex+=1;
+        }else{
+            playSong(0);
+            currentsongindex=0;
+        }
+        buildNotification();
     }
 
     @Override
     public void onClick(View view) {
         int id=view.getId();
         //neu an nut pause
+        if(id==R.id.btnplay){
+            if(mp.isPlaying()){
+                if(mp!=null){
+                    mp.pause();
+                    btnPlay.setImageResource(R.drawable.btnplay);
+                }
+            }else{
+                if(mp!=null){
+                    mp.start();
+                    btnPlay.setImageResource(R.drawable.btnpause);
+                }
+            }
+        }
+        //forward button
+        if(id==R.id.btnfoward){
+            int currentPosition=mp.getCurrentPosition();
+            if(currentPosition+seekForwardTime<=mp.getDuration()){
+                mp.seekTo(currentPosition+seekForwardTime);
+            }
+            else{
+                mp.seekTo(mp.getDuration());
+            }
+        }
+
+        //backward button
+        if(id==R.id.btnbackward){
+            int currentPosition=mp.getCurrentPosition();
+            if(currentPosition-seekBackwardTime>=0){
+                mp.seekTo(currentPosition-seekBackwardTime);
+            }else{
+                mp.seekTo(0);
+            }
+        }
+
+        //next song
+        if(id==R.id.btnnextsong){
+            if(currentsongindex<(arrSongs.size()-1)){
+                playSong(currentsongindex+1);
+                currentsongindex+=1;
+            }
+            else{
+                playSong(0);
+                currentsongindex=0;
+            }
+            buildNotification();
+        }
+
+        //back song
+        if(id==R.id.btnbacksong){
+            if(currentsongindex>0){
+                playSong(currentsongindex-1);
+                currentsongindex-=1;
+            }
+            else {
+                playSong(arrSongs.size()-1);
+                currentsongindex=arrSongs.size()-1 ;
+            }
+            buildNotification();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater=getMenuInflater();
+        menuInflater.inflate(R.menu.header_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.list_songs:
+                Intent intent=new Intent(this, ListSongActivity.class);
+                startActivityForResult(intent, SELECT_SONG_REQUEST);
+                break;
+        }
+        return true;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mp.release();
+        NotificationManager notificationManager=(NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.cancel(1);
     }
 
     @Override

@@ -4,8 +4,16 @@
         "source": "D:\\SteamLibrary\\MP3Player\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\SteamLibrary\\MP3Player\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_list_songs.xml.flat",
+        "source": "D:\\SteamLibrary\\MP3Player\\app\\src\\main\\res\\layout\\activity_list_songs.xml"
+    },
+    {
         "merged": "D:\\SteamLibrary\\MP3Player\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "D:\\SteamLibrary\\MP3Player\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "D:\\SteamLibrary\\MP3Player\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tpameofficial.png.flat",
+        "source": "D:\\SteamLibrary\\MP3Player\\app\\src\\main\\res\\drawable\\tpameofficial.png"
     },
     {
         "merged": "D:\\SteamLibrary\\MP3Player\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -52,6 +60,10 @@
         "source": "D:\\SteamLibrary\\MP3Player\\app\\src\\main\\res\\drawable\\btnfoward.png"
     },
     {
+        "merged": "D:\\SteamLibrary\\MP3Player\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_player.xml.flat",
+        "source": "D:\\SteamLibrary\\MP3Player\\app\\src\\main\\res\\layout\\activity_player.xml"
+    },
+    {
         "merged": "D:\\SteamLibrary\\MP3Player\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "D:\\SteamLibrary\\MP3Player\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
@@ -84,6 +96,10 @@
         "source": "D:\\SteamLibrary\\MP3Player\\app\\src\\main\\res\\drawable\\btnnext.png"
     },
     {
+        "merged": "D:\\SteamLibrary\\MP3Player\\app\\build\\intermediates\\res\\merged\\debug\\layout_song_item.xml.flat",
+        "source": "D:\\SteamLibrary\\MP3Player\\app\\src\\main\\res\\layout\\song_item.xml"
+    },
+    {
         "merged": "D:\\SteamLibrary\\MP3Player\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btnpause.png.flat",
         "source": "D:\\SteamLibrary\\MP3Player\\app\\src\\main\\res\\drawable\\btnpause.png"
     },
@@ -98,6 +114,10 @@
     {
         "merged": "D:\\SteamLibrary\\MP3Player\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "D:\\SteamLibrary\\MP3Player\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "D:\\SteamLibrary\\MP3Player\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tpame.png.flat",
+        "source": "D:\\SteamLibrary\\MP3Player\\app\\src\\main\\res\\drawable\\tpame.png"
     },
     {
         "merged": "D:\\SteamLibrary\\MP3Player\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btnbacksong.png.flat",
